@@ -28,7 +28,7 @@ const createList = () => {
 </script>
 
 <template>
-  <form id="NewListForm" @submit.prevent="createList">
+  <form id="AddList" @submit.prevent="createList">
     <h2>{{ newListTitle }}</h2>
     <label class="title" name="title">{{ newListTitle }}</label>
     <input type="text" id="newListTitle" v-model.trim="newListTitle" />
