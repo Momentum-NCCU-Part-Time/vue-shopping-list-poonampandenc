@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-// import NewListForm from './NewListForm.vue'
+import AddShoppingList from './AddShoppingList.vue'
 
 const lists = ref([])
 fetch('http://localhost:3000/lists/', {
@@ -10,18 +10,17 @@ fetch('http://localhost:3000/lists/', {
   .then((res) => res.json())
   .then((data) => (lists.value = data))
 
-// const addListToLists = (list) => {
-//   lists.value = [...lists.value, list]
-// }
+const addListToLists = (list) => {
+  lists.value = [...lists.value, list]
+}
 </script>
 
 <template>
-  <!-- <NewListForm @list-created="addListToLists" /> -->
-  <form id="NewListForm" @submit.prevent="createList">
-    <button type="submit">Add New List</button>
-  </form>
-  <div class="ListOfLists">
-    <h2>All Lists</h2>
+  <AddShoppingList @list-created="addListToLists" />
+  <button @click="createList()" type="submit">Add New List</button>
+
+  <div class="Lists">
+    <h2>Shopping Lists</h2>
   </div>
   <div>
     <ul>

@@ -1,14 +1,16 @@
 <script setup>
 import { ref } from 'vue'
-import ListOfLists from './components/ListOfLists.vue'
+import ShoppingLists from './components/ShoppingLists.vue'
+// import AddShoppingList from './components/AddShoppingList.vue'
+const lists = ref([])
 </script>
 
 <template>
   <div>
-    <h1>Vue Shopping List</h1>
+    <h1>Shopping List App</h1>
   </div>
   <div>
-    <ListOfLists />
+    <ShoppingLists />
   </div>
 </template>
 

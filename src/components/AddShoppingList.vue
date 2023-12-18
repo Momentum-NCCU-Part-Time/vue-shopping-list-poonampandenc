@@ -29,24 +29,12 @@ const createList = () => {
 
 <template>
   <form id="NewListForm" @submit.prevent="createList">
-    <h2>New List</h2>
-    <div class="title">
-      <input
-        type="text"
-        id="newListTitle"
-        v-model.trim="newListTitle"
-        placeholder="New List Title"
-      />
-    </div>
+    <h2>{{ newListTitle }}</h2>
+    <label class="title" name="title">{{ newListTitle }}</label>
+    <input type="text" id="newListTitle" v-model.trim="newListTitle" />
     <br />
-    <div class="items">
-      <input
-        type="text"
-        id="newListItems"
-        v-model.trim="newListItems"
-        placeholder="New List Items"
-      />
-    </div>
-    <button type="submit" :disabled="!newListTitle">Add List</button>
+    <!-- <label class="items" name="listItems">{{ newListItems }}</label> -->
+    <input type="list" id="newListItems" v-model.trim="newListItems" placeholder="New List Items" />
+    <button for="btn" action="submit">Add List</button>
   </form>
 </template>

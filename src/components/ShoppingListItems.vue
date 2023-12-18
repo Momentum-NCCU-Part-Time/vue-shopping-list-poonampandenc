@@ -2,15 +2,20 @@
 import { ref } from 'vue'
 // import NewListForm from './NewListForm.vue'
 
-const props = defineProps({ item: Object })
+const props = defineProps({
+  id: number,
+  title: String,
+  content: String
+})
 </script>
 
 <template>
-  <div>
+  <div class="ListItem">
+    <h2>{{ props.title }}</h2>
     <ul>
-      <li v-for="item in items" :key="item.id">
+      <li>
         {{ list.items.item - name }}
-        {{ list.items.purchased }}
+        <!-- {{ list.items.purchased }} -->
       </li>
     </ul>
   </div>
