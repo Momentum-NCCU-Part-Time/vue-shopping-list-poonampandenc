@@ -1,0 +1,48 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "title": "Costco",
+      "items": [
+        {
+          "id": 1,
+          "item-name": "toilet paper",
+          "purchased": false
+        },
+        {
+          "id": 2,
+          "item-name": "paper towels",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2018-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Wegmans",
+      "items": [
+        {
+          "id": 1,
+          "item-name": "bananas",
+          "purchased": false
+        },
+        {
+          "id": 2,
+          "item-name": "apples",
+          "purchased": false
+        },
+        {
+          "id": 3,
+          "item-name": "blueberries",
+          "purchased": false
+        },
+        {
+          "id": 4,
+          "item-name": "melon",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2018-01-01T00:00:00.000Z"
+    }    
+  ]
+}
