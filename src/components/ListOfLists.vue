@@ -29,7 +29,6 @@ fetch('http://localhost:3000/lists/', {
         {{ list.title }}: {{ list.items.length }} items
         <br />
         {{ list.updatedAt }}
-        <br />
       </li>
     </ul>
   </div>
