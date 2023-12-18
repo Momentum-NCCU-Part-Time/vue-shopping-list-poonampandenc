@@ -10,9 +10,9 @@ fetch('http://localhost:3000/lists/', {
   .then((res) => res.json())
   .then((data) => (lists.value = data))
 
-const addListToLists = (list) => {
-  lists.value = [...lists.value, list]
-}
+// const addListToLists = (list) => {
+//   lists.value = [...lists.value, list]
+// }
 </script>
 
 <template>
@@ -25,10 +25,7 @@ const addListToLists = (list) => {
   </div>
   <div>
     <ul>
-      <li v-for="list in lists" :key="list.id">
-        {{ list.title }}
-        {{ list.items.length }}
-      </li>
+      <li v-for="list in lists" :key="list.id">{{ list.title }}: {{ list.items.length }} items</li>
     </ul>
   </div>
 </template>
