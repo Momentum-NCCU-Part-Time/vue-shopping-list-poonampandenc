@@ -1,40 +1,36 @@
 <script setup>
 import { ref } from 'vue'
-const newListTitle = ref('')
-const newListItems = ref([])
+const newList = ref('')
 
-const resetNote = () => {
-  newListTitle.value = ''
-  newListItems.value = []
+const resetList = () => {
+  newList.value = ''
 }
-const emit = defineEmits(['list-created'])
+const emit = defineEmits(['listCreated'])
 
-const createList = () => {
-  if (!newListTitle) return
+const addNewList = () => {
+  // props.itemProp.id
+  if (!newList) return
   fetch('http://localhost:3000/lists/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    items: JSON.stringify({
-      title: newListTitle.value,
-      items: newListItems.value
+    body: JSON.stringify({
+      title: newList.value,
+      items: [],
+      updatedAt: new Date()
     })
   })
     .then((res) => res.json())
-    .then((list) => {
-      emit('listCreated', list)
-      resetNote()
+    .then((newList) => {
+      emit('listCreated', newList)
+      resetList()
     })
 }
 </script>
 
 <template>
-  <form id="AddList" @submit.prevent="createList">
-    <h2>{{ newListTitle }}</h2>
-    <label class="title" name="title">{{ newListTitle }}</label>
-    <input type="text" id="newListTitle" v-model.trim="newListTitle" />
-    <br />
-    <!-- <label class="items" name="listItems">{{ newListItems }}</label> -->
-    <input type="list" id="newListItems" v-model.trim="newListItems" placeholder="New List Items" />
-    <button for="btn" action="submit">Add List</button>
+  <form id="newList" @submit.prevent="addNewList">
+    <!-- <h2>{{ newList }}</h2> -->
+    <input v-model="newList" type="text" placeholder="New List Title" />
+    <button type="submit" :disabled="!newList">Add A New List</button>
   </form>
 </template>

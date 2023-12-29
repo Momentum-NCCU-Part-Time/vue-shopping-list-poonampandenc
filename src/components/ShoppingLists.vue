@@ -1,8 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 import AddShoppingList from './AddShoppingList.vue'
+import ShoppingListItems from './ShoppingListItems.vue'
+// import Items from './Items.vue'
+import AddItem from './AddItem.vue'
 
 const lists = ref([])
+// const purchased = ref(false)
+const addItem = ref('')
+
 fetch('http://localhost:3000/lists/', {
   method: 'GET',
   headers: { 'Content-Type': 'application/json' }
@@ -10,25 +16,39 @@ fetch('http://localhost:3000/lists/', {
   .then((res) => res.json())
   .then((data) => (lists.value = data))
 
-const addListToLists = (list) => {
+const addNewList = (list) => {
   lists.value = [...lists.value, list]
+}
+
+const addNewItem = (updatedList) => {
+  console.log(lists)
+  let idx = lists.value.findIndex((list) => list.id === updatedList.id)
+  lists.value[idx] = updatedList
 }
 </script>
 
 <template>
-  <AddShoppingList @list-created="addListToLists" />
-  <button @click="createList()" type="submit">Add New List</button>
-
   <div class="Lists">
+    <AddShoppingList @listCreated="addNewList" />
+
     <h2>Shopping Lists</h2>
-  </div>
-  <div>
-    <ul>
+
+    <div v-for="list in lists" :key="list.id">
+      <!-- <ul>
       <li v-for="list in lists" :key="list.id">
         {{ list.title }}: {{ list.items.length }} items
         <br />
         {{ list.updatedAt }}
       </li>
-    </ul>
+    </ul> -->
+
+      <ShoppingListItems :list="list" />
+      <!-- <form class="itemForm" @submit.prevent="addNewItem(list)">
+        <input v-model="addNewItem" type="text" placeholder="Add Item" />
+        <button type="submit">Add New Item</button>
+      </form> -->
+
+      <AddItem :list="list" @itemCreated="addNewItem" />
+    </div>
   </div>
 </template>

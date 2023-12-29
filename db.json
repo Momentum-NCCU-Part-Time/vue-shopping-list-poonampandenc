@@ -6,16 +6,21 @@
       "items": [
         {
           "id": 1,
-          "item-name": "toilet paper",
-          "purchased": false
+          "itemName": "toilet paper",
+          "purchased": true
         },
         {
           "id": 2,
-          "item-name": "paper towels",
+          "itemName": "paper towels",
+          "purchased": false
+        },
+        {
+          "id": 3,
+          "itemName": "mangoes",
           "purchased": false
         }
       ],
-      "updatedAt": "2018-01-01T00:00:00.000Z"
+      "updatedAt": "2023-12-29T22:12:16.151Z"
     },
     {
       "id": 2,
@@ -23,26 +28,110 @@
       "items": [
         {
           "id": 1,
-          "item-name": "bananas",
+          "itemName": "bananas",
           "purchased": false
         },
         {
           "id": 2,
-          "item-name": "apples",
+          "itemName": "apples",
           "purchased": false
         },
         {
           "id": 3,
-          "item-name": "blueberries",
+          "itemName": "blueberries",
           "purchased": false
         },
         {
           "id": 4,
-          "item-name": "melon",
+          "itemName": "melon",
+          "purchased": true
+        }
+      ],
+      "updatedAt": "2023-12-29T22:18:13.028Z"
+    },
+    {
+      "title": "Sams",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "Grapes",
           "purchased": false
         }
       ],
-      "updatedAt": "2018-01-01T00:00:00.000Z"
+      "updatedAt": "2023-12-29T22:13:53.948Z",
+      "id": 3
+    },
+    {
+      "title": "Trader Joes",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "cherries",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2023-12-29T22:15:47.709Z",
+      "id": 4
+    },
+    {
+      "title": "Whole Foods",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "peanut butter",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2023-12-29T22:17:38.345Z",
+      "id": 5
+    },
+    {
+      "title": "Harris Teeter",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "cilantro",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2023-12-29T22:21:37.334Z",
+      "id": 6
+    },
+    {
+      "title": "Sprouts",
+      "items": [],
+      "updatedAt": "2023-12-29T20:09:21.145Z",
+      "id": 7
+    },
+    {
+      "title": "Food Lion",
+      "items": [],
+      "updatedAt": "2023-12-29T20:13:45.944Z",
+      "id": 8
+    },
+    {
+      "title": "Krogers",
+      "items": [],
+      "updatedAt": "2023-12-29T20:18:31.832Z",
+      "id": 9
+    },
+    {
+      "title": "WaWa",
+      "items": [],
+      "updatedAt": "2023-12-29T20:39:51.834Z",
+      "id": 10
+    },
+    {
+      "title": "Piggly Wiggly",
+      "items": [],
+      "updatedAt": "2023-12-29T20:49:01.561Z",
+      "id": 11
+    },
+    {
+      "title": "Giants",
+      "items": [],
+      "updatedAt": "2023-12-29T20:53:14.291Z",
+      "id": 12
     }
   ]
 }

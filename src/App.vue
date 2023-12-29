@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import ShoppingLists from './components/ShoppingLists.vue'
-// import AddShoppingList from './components/AddShoppingList.vue'
-const lists = ref([])
+// const lists = ref([])
 </script>
 
 <template>
