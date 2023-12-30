@@ -14,6 +14,25 @@ const togglePurchased = (item) => {
 const doEdit = (e) => {
   editing.value = e
 }
+
+const addNewItem = (newItem) => {
+  // props.itemProp.id
+  if (!newItem) return
+  fetch('http://localhost:3000/lists/' + props.list.id, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      title: props.list.title,
+      items: [...props.list.items, newItem],
+      updatedAt: new Date()
+    })
+  })
+    .then((res) => res.json())
+    .then((updatedList) => {
+      emit('listUpdated', updatedList)
+      // resetList()
+    })
+}
 const savePurchasedStatus = (list) => {
   fetch('http://localhost:3000/lists/' + list.id, {
     method: 'PATCH',
@@ -47,6 +66,9 @@ const savePurchasedStatus = (list) => {
         <!-- {{ list.items.purchased }} -->
       </li>
     </ul>
+  </div>
+  <div v-if="editing">
+    <AddItem :nextId="props.list.items.length + 1" @itemCreated="addNewItem" />
     <!-- <div v-if="editing">
       <AddItem @itemCreated="addNewItem" />
     </div> -->

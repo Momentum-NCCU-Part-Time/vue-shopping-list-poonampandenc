@@ -1,46 +1,50 @@
 <script setup>
 import { ref } from 'vue'
-const newItem = ref('')
+const newItemName = ref('')
 
-const props = defineProps({ list: Object })
+const props = defineProps({ nextId: Number })
 // const existingItems = ref(props.list[items])
 // console.log(existingItems.value)
 
 const emit = defineEmits(['itemCreated'])
 
 const resetItem = () => {
-  newItem.value = ''
+  newItemName.value = ''
 }
 
-const addNewItem = () => {
-  if (!newItem) return
-  fetch('http://localhost:3000/lists/' + props.list.id, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      title: props.list.title,
-      items: [
-        ...props.list.items,
-        {
-          id: props.list.items.length + 1,
-          itemName: newItem.value,
-          purchased: false
-        }
-      ],
-      updatedAt: new Date()
-    })
+const createNewItem = () => {
+  if (!newItemName) return
+  //   fetch('http://localhost:3000/lists/' + props.list.id, {
+  //     method: 'PATCH',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({
+  //       title: props.list.title,
+  //       items: [
+  //         ...props.list.items,
+  //         {
+  //           id: props.list.items.length + 1,
+  //           itemName: newItem.value,
+  //           purchased: false
+  //         }
+  //       ],
+  //       updatedAt: new Date()
+  //     })
+  //   })
+  //     .then((res) => res.json())
+  //     .then((updatedList) => {
+  emit('itemCreated', {
+    id: props.nextId,
+    itemName: newItemName.value,
+    purchased: false
   })
-    .then((res) => res.json())
-    .then((updatedList) => {
-      emit('itemCreated', updatedList)
-      resetItem()
-    })
+  resetItem()
+  // })
 }
 </script>
 
 <template>
-  <form class="itemForm" @submit.prevent="addNewItem">
-    <input v-model="newItem" type="text" placeholder="Add Item" />
-    <button type="submit" :disabled="!newItem">Add An Item</button>
+  <form class="itemForm" @submit.prevent="createNewItem">
+    <input v-model="newItemName" type="text" placeholder="Add Item" />
+    <button type="submit" :disabled="!newItemName">Add An Item</button>
   </form>
 </template>

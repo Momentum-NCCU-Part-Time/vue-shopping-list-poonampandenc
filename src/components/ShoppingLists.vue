@@ -42,13 +42,13 @@ const addNewItem = (updatedList) => {
       </li>
     </ul> -->
 
-      <ShoppingListItems :list="list" />
+      <ShoppingListItems :list="list" @listUpdated="addNewItem" />
       <!-- <form class="itemForm" @submit.prevent="addNewItem(list)">
         <input v-model="addNewItem" type="text" placeholder="Add Item" />
         <button type="submit">Add New Item</button>
       </form> -->
 
-      <AddItem :list="list" @itemCreated="addNewItem" />
+      <!-- <AddItem :list="list" @itemCreated="addNewItem" /> -->
     </div>
   </div>
 </template>

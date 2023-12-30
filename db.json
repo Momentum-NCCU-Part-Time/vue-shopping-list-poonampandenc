@@ -20,7 +20,7 @@
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-29T22:12:16.151Z"
+      "updatedAt": "2023-12-30T00:28:03.305Z"
     },
     {
       "id": 2,
@@ -34,7 +34,7 @@
         {
           "id": 2,
           "itemName": "apples",
-          "purchased": false
+          "purchased": true
         },
         {
           "id": 3,
@@ -45,93 +45,26 @@
           "id": 4,
           "itemName": "melon",
           "purchased": true
+        },
+        {
+          "id": 5,
+          "itemName": "grapes",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-29T22:18:13.028Z"
+      "updatedAt": "2023-12-30T00:57:16.969Z"
     },
     {
       "title": "Sams",
       "items": [
         {
           "id": 1,
-          "itemName": "Grapes",
+          "itemName": "Organic Spinach",
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-29T22:13:53.948Z",
+      "updatedAt": "2023-12-30T00:57:08.970Z",
       "id": 3
-    },
-    {
-      "title": "Trader Joes",
-      "items": [
-        {
-          "id": 1,
-          "itemName": "cherries",
-          "purchased": false
-        }
-      ],
-      "updatedAt": "2023-12-29T22:15:47.709Z",
-      "id": 4
-    },
-    {
-      "title": "Whole Foods",
-      "items": [
-        {
-          "id": 1,
-          "itemName": "peanut butter",
-          "purchased": false
-        }
-      ],
-      "updatedAt": "2023-12-29T22:17:38.345Z",
-      "id": 5
-    },
-    {
-      "title": "Harris Teeter",
-      "items": [
-        {
-          "id": 1,
-          "itemName": "cilantro",
-          "purchased": false
-        }
-      ],
-      "updatedAt": "2023-12-29T22:21:37.334Z",
-      "id": 6
-    },
-    {
-      "title": "Sprouts",
-      "items": [],
-      "updatedAt": "2023-12-29T20:09:21.145Z",
-      "id": 7
-    },
-    {
-      "title": "Food Lion",
-      "items": [],
-      "updatedAt": "2023-12-29T20:13:45.944Z",
-      "id": 8
-    },
-    {
-      "title": "Krogers",
-      "items": [],
-      "updatedAt": "2023-12-29T20:18:31.832Z",
-      "id": 9
-    },
-    {
-      "title": "WaWa",
-      "items": [],
-      "updatedAt": "2023-12-29T20:39:51.834Z",
-      "id": 10
-    },
-    {
-      "title": "Piggly Wiggly",
-      "items": [],
-      "updatedAt": "2023-12-29T20:49:01.561Z",
-      "id": 11
-    },
-    {
-      "title": "Giants",
-      "items": [],
-      "updatedAt": "2023-12-29T20:53:14.291Z",
-      "id": 12
     }
   ]
 }
