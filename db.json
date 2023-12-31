@@ -60,11 +60,33 @@
         {
           "id": 1,
           "itemName": "Organic Spinach",
+          "purchased": true
+        }
+      ],
+      "updatedAt": "2023-12-31T05:50:47.104Z",
+      "id": 3
+    },
+    {
+      "title": "Whole Foods",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "peanut butter",
+          "purchased": false
+        },
+        {
+          "id": 2,
+          "itemName": "tortilla",
+          "purchased": true
+        },
+        {
+          "id": 3,
+          "itemName": "salsa",
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-30T00:57:08.970Z",
-      "id": 3
+      "updatedAt": "2023-12-31T06:03:08.107Z",
+      "id": 4
     }
   ]
 }

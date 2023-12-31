@@ -11,8 +11,9 @@ const togglePurchased = (item) => {
   console.log(props.list)
   savePurchasedStatus(props.list)
 }
-const doEdit = (e) => {
-  editing.value = e
+const doEdit = () => {
+  // editing.value = e
+  editing.value = !editing.value
 }
 
 const addNewItem = (newItem) => {
@@ -50,9 +51,11 @@ const savePurchasedStatus = (list) => {
 
 <template>
   <div class="listItem">
-    <h2>{{ props.list.title }}: {{ props.list.items.length }}</h2>
-    <button v-if="editing" @click="doEdit(false)">Close List</button>
-    <button v-else @click="doEdit(true)">Show List</button>
+    <button>
+      <h2 @click="doEdit">{{ props.list.title }}: {{ props.list.items.length }}</h2>
+    </button>
+    <!-- <button v-if="editing" @click="doEdit(false)">Close List</button>
+    <button v-else @click="doEdit(true)">Show List</button> -->
 
     <ul v-if="editing">
       <li
