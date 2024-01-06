@@ -1,92 +1,101 @@
 {
   "lists": [
     {
-      "id": 1,
-      "title": "Costco",
+      "title": "costco",
       "items": [
         {
           "id": 1,
           "itemName": "toilet paper",
-          "purchased": true
+          "purchased": false
         },
         {
           "id": 2,
           "itemName": "paper towels",
-          "purchased": false
-        },
-        {
-          "id": 3,
-          "itemName": "mangoes",
-          "purchased": false
+          "purchased": true
         }
       ],
-      "updatedAt": "2023-12-30T00:28:03.305Z"
+      "updatedAt": "2024-01-05T03:10:41.589Z",
+      "id": 5
     },
     {
-      "id": 2,
-      "title": "Wegmans",
+      "title": "sams",
       "items": [
         {
           "id": 1,
-          "itemName": "bananas",
+          "itemName": "toilet paper",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2024-01-06T02:01:02.546Z",
+      "id": 6
+    },
+    {
+      "title": "wegmans",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "dishwashing soap",
           "purchased": false
         },
         {
           "id": 2,
-          "itemName": "apples",
-          "purchased": true
-        },
-        {
-          "id": 3,
-          "itemName": "blueberries",
-          "purchased": false
-        },
-        {
-          "id": 4,
-          "itemName": "melon",
-          "purchased": true
-        },
-        {
-          "id": 5,
-          "itemName": "grapes",
+          "itemName": "detergent",
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-30T00:57:16.969Z"
+      "updatedAt": "2024-01-06T02:01:31.724Z",
+      "id": 7
     },
     {
-      "title": "Sams",
+      "title": "trader joes",
       "items": [
         {
           "id": 1,
-          "itemName": "Organic Spinach",
-          "purchased": true
-        }
-      ],
-      "updatedAt": "2023-12-31T05:50:47.104Z",
-      "id": 3
-    },
-    {
-      "title": "Whole Foods",
-      "items": [
-        {
-          "id": 1,
-          "itemName": "peanut butter",
+          "itemName": "green peas",
           "purchased": false
         },
         {
           "id": 2,
-          "itemName": "tortilla",
-          "purchased": true
-        },
-        {
-          "id": 3,
-          "itemName": "salsa",
+          "itemName": "ravioli",
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-31T06:03:08.107Z",
-      "id": 4
+      "updatedAt": "2024-01-06T02:02:02.720Z",
+      "id": 8
+    },
+    {
+      "title": "sprouts",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "cereal",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2024-01-06T02:02:24.377Z",
+      "id": 9
+    },
+    {
+      "title": "harris teeter",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "cilantro",
+          "purchased": true
+        },
+        {
+          "id": 2,
+          "itemName": "dill",
+          "purchased": false
+        },
+        {
+          "id": 3,
+          "itemName": "swiss chard",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2024-01-06T02:07:15.975Z",
+      "id": 10
     }
   ]
 }

@@ -25,6 +25,11 @@ const addNewItem = (updatedList) => {
   let idx = lists.value.findIndex((list) => list.id === updatedList.id)
   lists.value[idx] = updatedList
 }
+
+const deleteList = (listIdToDelete) => {
+  let listidx = lists.value.findIndex((list) => list.id === listIdToDelete)
+  lists.value.splice(listidx, 1)
+}
 </script>
 
 <template>
@@ -42,7 +47,7 @@ const addNewItem = (updatedList) => {
       </li>
     </ul> -->
 
-      <ShoppingListItems :list="list" @listUpdated="addNewItem" />
+      <ShoppingListItems :list="list" @listUpdated="addNewItem" @listDeleted="deleteList" />
       <!-- <form class="itemForm" @submit.prevent="addNewItem(list)">
         <input v-model="addNewItem" type="text" placeholder="Add Item" />
         <button type="submit">Add New Item</button>
