@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 const newList = ref('')
+const props = defineProps({ itemProp: Object, list: Object })
 
 const resetList = () => {
   newList.value = ''
