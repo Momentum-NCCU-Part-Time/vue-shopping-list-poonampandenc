@@ -9,7 +9,7 @@ const lists = ref([])
 // const purchased = ref(false)
 const addItem = ref('')
 
-fetch('http://localhost:3000/lists/', {
+fetch('http://localhost:3000/shoppinglists/', {
   method: 'GET',
   headers: { 'Content-Type': 'application/json' }
 })
@@ -22,12 +22,12 @@ const addNewList = (list) => {
 
 const addNewItem = (updatedList) => {
   console.log(lists)
-  let idx = lists.value.findIndex((list) => list.id === updatedList.id)
+  let idx = lists.value.findIndex((list) => list._id === updatedList._id)
   lists.value[idx] = updatedList
 }
 
 const deleteList = (listIdToDelete) => {
-  let listidx = lists.value.findIndex((list) => list.id === listIdToDelete)
+  let listidx = lists.value.findIndex((list) => list._id === listIdToDelete)
   lists.value.splice(listidx, 1)
 }
 </script>
@@ -38,7 +38,7 @@ const deleteList = (listIdToDelete) => {
 
     <h2>Shopping Lists</h2>
 
-    <div v-for="list in lists" :key="list.id">
+    <div v-for="list in lists" :key="list._id">
       <!-- <ul>
       <li v-for="list in lists" :key="list.id">
         {{ list.title }}: {{ list.items.length }} items

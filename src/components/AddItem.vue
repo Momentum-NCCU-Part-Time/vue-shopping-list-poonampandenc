@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 const newItemName = ref('')
 
-const props = defineProps({ nextId: Number })
+// const props = defineProps({ nextId: Number })
 // const existingItems = ref(props.list[items])
 // console.log(existingItems.value)
 
@@ -23,7 +23,7 @@ const createNewItem = () => {
   //         ...props.list.items,
   //         {
   //           id: props.list.items.length + 1,
-  //           itemName: newItem.value,
+  //           name: newItem.value,
   //           purchased: false
   //         }
   //       ],
@@ -33,8 +33,8 @@ const createNewItem = () => {
   //     .then((res) => res.json())
   //     .then((updatedList) => {
   emit('itemCreated', {
-    id: props.nextId,
-    itemName: newItemName.value,
+    // _id: props.nextId,
+    name: newItemName.value,
     purchased: false
   })
   resetItem()

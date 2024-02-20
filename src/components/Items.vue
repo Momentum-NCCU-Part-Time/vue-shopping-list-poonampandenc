@@ -7,7 +7,7 @@ const props = defineProps({ item: Object })
 <template>
   <ul>
     <li v-for="prop in props">
-      <!-- {{ prop.items.itemName }} -->
+      <!-- {{ prop.items.name }} -->
       {{ console.log(prop) }}
       <!-- <input v-model="purchased" type="checkbox" /> -->
     </li>

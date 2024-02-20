@@ -1,9 +1,10 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/RqhuAf8n)
+
 # Shopping List App: Vue
 
 ## Directions
 
-For this project, you will build a single-page application using Vue.js that allows a user to keep a number of shopping lists, and to create, edit, and delete lists and list items. Shopping Lists are made up of a title, items, and the date/time most recently updated. 
+For this project, you will build a single-page application using Vue.js that allows a user to keep a number of shopping lists, and to create, edit, and delete lists and list items. Shopping Lists are made up of a title, items, and the date/time most recently updated.
 
 The design of this app is up to you. You're welcome to reuse the design from the previous project, or you can come up with something new. You can also use [Tailwind](https://tailwindcss.com/) or another CSS framework if you'd like.
 
@@ -47,20 +48,20 @@ To add a new list, make a `POST` request to `http://localhost:3000/lists/`. You 
 
 ```js
 fetch('http://localhost:3000/lists/', {
-  method: 'POST', 
-  headers: {"Content-Type": "application/json"}, 
-  body: JSON.stringify({ title, items, updatedAt: new Date() })
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ title, items })
 })
-.then(res => res.json())
-.then(
-  data => console.log(data)
-  // or whatever you need to do
-)
+  .then((res) => res.json())
+  .then(
+    (data) => console.log(data)
+    // or whatever you need to do
+  )
 ```
 
 The `headers` attribute lets json-server know you will be sending JSON to it for it to read. The `body` attribute is the JSON you are sending. If you have an object, then you must call `JSON.stringify` with that object.
 
-To **create a new list**, make a `POST` request to `http://localhost:3000/lists/` as shown above. Notice that you do not need to include the `id` key, since JSON server will automatically generate an id for you. You will need to include the `title` and `body` keys, and you will need to include the `updatedAt` key with the current date and time. 
+To **create a new list**, make a `POST` request to `http://localhost:3000/lists/` as shown above. Notice that you do not need to include the `id` key, since JSON server will automatically generate an id for you. You will need to include the `title` and `body` keys, and you will need to include the `updatedAt` key with the current date and time.
 
 You can store the date in date time string format, using the `new Date()` constructor. When you want to display the date in the UI, you can format it then using the [Date object's methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) or, more conveniently, using a library like [Day.js](https://day.js.org/).
 
@@ -82,4 +83,3 @@ Your application should have the following functionality:
 
 - allow a user to remove items from their shopping lists (without editing the full list)
 - allow users to share and/or move items between lists
-

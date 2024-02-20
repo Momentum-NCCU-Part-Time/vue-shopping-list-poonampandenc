@@ -11,13 +11,14 @@ const emit = defineEmits(['listCreated'])
 const addNewList = () => {
   // props.itemProp.id
   if (!newList) return
-  fetch('http://localhost:3000/lists/', {
+  fetch('http://localhost:3000/shoppinglists/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       title: newList.value,
-      items: [],
-      updatedAt: new Date()
+      items: []
+      // ,
+      // updatedAt: new Date()
     })
   })
     .then((res) => res.json())

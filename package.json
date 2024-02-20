@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "api": "json-server db.json",
-    "start": "npm-run-all --parallel dev api",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",

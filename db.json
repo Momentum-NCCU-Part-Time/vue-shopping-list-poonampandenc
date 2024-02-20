@@ -18,18 +18,6 @@
       "id": 5
     },
     {
-      "title": "sams",
-      "items": [
-        {
-          "id": 1,
-          "itemName": "toilet paper",
-          "purchased": false
-        }
-      ],
-      "updatedAt": "2024-01-06T02:01:02.546Z",
-      "id": 6
-    },
-    {
       "title": "wegmans",
       "items": [
         {
@@ -94,7 +82,7 @@
           "purchased": false
         }
       ],
-      "updatedAt": "2024-01-06T02:07:15.975Z",
+      "updatedAt": "2024-01-06T03:21:02.095Z",
       "id": 10
     }
   ]
