@@ -29,6 +29,8 @@ const addNewItem = (updatedList) => {
 const deleteList = (listIdToDelete) => {
   let listidx = lists.value.findIndex((list) => list._id === listIdToDelete)
   lists.value.splice(listidx, 1)
+  // lists.value[idx] = deletedList
+  // list.value = list.value.filter((list) => list._id !== listIdToDelete)
 }
 </script>
 

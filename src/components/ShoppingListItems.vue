@@ -37,7 +37,7 @@ const addNewItem = (newItem) => {
     })
 }
 const savePurchasedStatus = (list) => {
-  fetch('http://localhost:3000/shoppinglists/' + list._id, {
+  fetch('http://localhost:3000/shoppinglists/' + props.list._id, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -67,7 +67,7 @@ const deleteList = () => {
     //   updatedAt: new Date()
     // })
   })
-    .then((res) => res.json())
+    .then((res) => res)
     .then((r) => {
       emit('listDeleted', props.list._id)
       // resetList()
